@@ -1,0 +1,109 @@
+@import "theme.less";
+@import "utils.less";
+
+@topbar-height: 55px;
+#topbar {
+   height: @topbar-height;
+   
+   font-family: @font-topbar;
+   font-size: 14px;
+   font-decoration: none;
+   
+   padding: 0 0 0 (@logo_width - 40px);
+   
+   ul {
+      a {
+         display: block;
+         color: @colour-borders-text;
+         text-decoration: none;
+         padding: 0 7px;
+         
+         &:hover {
+            text-shadow: 2px 2px black;
+            background-image: url('images/topbar-hover.png');
+         }
+      }
+      
+      float: left;
+      list-style-type: none;
+      display: block;
+      padding: 0px;
+      
+      margin: 0;
+      height: @topbar-height;
+      line-height: @topbar-height;
+      
+      li {
+         display: block;
+         float: left;
+         
+         &.current-menu-item a {
+            text-shadow: 2px 2px rgb(120,125,89);
+            background-image: url('images/topbar-select.png');
+         }
+      }
+   }
+   
+   .social {
+      float: right;
+      height: @topbar-height;
+      overflow: hidden;
+      
+      .logo {
+         margin-top: (@topbar-height - 32) / 2;
+      }
+   }
+}
+
+#main-logo {
+   position: absolute;
+   margin-left: -65px;
+   margin-top: -20px;
+   
+   .image( 'logo.png', @logo_width, @logo_height);
+}
+
+#logo-block {
+   width: @logo_width - 65px;
+   height: @logo_height - 90px;
+   float: left;
+}
+
+.minimal {
+   #topbar {
+      padding-left: @logo_width - 80px
+   }
+   
+   &.desktop #topbar {
+      font-size: 14px;
+   }
+            
+   &.mobile {
+      #main-logo {
+         .image( 'logo.png', @logo_width * 1.25, @logo_height * 1.25);
+            margin-left: -40px;
+      }
+      
+      #logo-block {
+         width: @logo_width - 65px;
+         height: @logo_height * 1.25 - 280px;
+         float: left;
+         display: none;
+      }
+      
+      ul a {
+         margin-left: 10px;
+      }
+      
+      
+      #topbar {
+         padding-left: @logo_width - 40px;
+         font-size: 2em;
+         height: @topbar-height * 2 + 20px;
+         padding-top: 8px;
+      }
+   }
+}
+
+   
+

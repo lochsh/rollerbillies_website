@@ -1,0 +1,59 @@
+@import "theme.less";
+
+.profiles {
+   
+   @profile-margin: 20px;
+   
+   .profile-row {
+      clear: both;
+      overflow: hidden;
+   }
+      
+   .profile-box {
+      clear: both;
+      background-color: #D9E77A;
+      margin: 5px @profile-margin 10px @profile-margin;
+      padding: 10px;
+      float: left;
+      min-height: 350px;
+      
+      .full-picture {
+         float: left; margin-right: 10px;
+      }
+      
+      font-size: 18px;
+   }
+         
+   .profile {
+      
+      .headshot {
+         width: 100px;
+         height: 100px;
+         float: left;
+         margin: 30px @profile-margin 0px @profile-margin;
+      }
+      
+      .text, .name {
+         display: none;
+      }
+      
+      .headshot {
+         cursor: pointer;
+         border: 3px solid #EEE;
+         &:hover {
+            border: 3px solid @colour-primary;  
+         }
+      }
+   }
+   
+   #profile-row-0 {
+      .headshot { margin-top: 0px; }
+   }
+   
+   .profile-deselected {
+      .headshot {
+         opacity:0.4;
+      }
+   }
+   
+}

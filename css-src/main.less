@@ -1,0 +1,139 @@
+/*
+ * Theme Name: Rollerbillies
+ * Theme URI: http://rollerbillies.com
+ * Description: Theme for Cambridge Rollerbillies' website.
+ * Version: 1.0
+ * Author: Dicey Tequil'Her and Bash.rc
+ */
+
+@import "theme.less";
+@import "utils.less";
+
+// Basic Elements
+
+html {
+}
+
+body {
+   background-color: @colour-bg;
+   background-image: url('images/bg.png');
+   background-repeat: repeat;
+   font-family: @font-content;
+   padding: 0;
+   margin: 0;
+}
+
+h1, h2, h3 {
+   font-weight: normal;
+   font-style: normal;
+   font-family: @font-titles;
+}
+
+h1 {
+   font-size: 28px;
+   margin: 10px 0px 8px 0px;
+}
+
+h2 {
+   font-size: 26px;
+   margin: 7px 0px 5px 0px;
+}
+
+h3 {
+   font-size: 18px;
+   margin: 4px 0px 5px 0px;
+}
+
+ul {
+   margin-top: 5px;
+}
+
+.hidden {
+   display: none;
+}
+
+.left {
+   float: left;
+}
+
+.right {
+   float: right;
+}
+
+// Main structural components
+
+#main-wrapper {
+   margin: 0;
+   padding: 0;
+}
+
+// Main div that wraps the content
+#main {
+   background-color: @colour-borders;
+   border: 2px solid lighten( @colour-borders, 15% );
+   
+   color: @colour-borders-text;
+   .gradient( darken( @colour-borders, 5% ), @colour-borders );
+   
+   max-width: 1000px;
+   
+   // Logos //
+     
+   .social {
+   
+      .fb-logo {
+         margin-left: 2px;
+         .image( 'fb.png', 32px, 32px );
+      }
+      
+      .twitter-logo {
+         margin-left: 15px;
+         margin-right: 5px;
+         .image( 'twitter.png', 32px, 32px );
+      }
+      
+      .logo {
+         display: block;
+         float: left;
+      }
+   }
+   
+  &.normal {
+      width: 85%;
+      padding: 0 35px;
+      margin: 3px auto;
+      font-size: 16px;
+            
+      #column-main {
+         float: left;
+         width: 65%;
+      }
+   }
+
+   &.minimal {
+      padding: 0px 10px 0 10px;
+      margin: 0 10px;
+      min-width: 690px;
+      
+      &.mobile {
+         min-width: 800px;
+         font-size: 18px;
+      }
+   }
+}
+
+#column-main {
+   overflow: hidden;
+}
+
+#column-right {
+   width: 220px;
+   float: right;
+}
+
+// Other less CSS. Order is important!
+@import "content.less";
+@import "header.less";
+@import "footer.less";
+@import "sidebar.less";
+@import "profiles.less";

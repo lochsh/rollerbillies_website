@@ -1,0 +1,85 @@
+@import "theme.less";
+
+.content {
+
+   padding: 0px;
+
+   font-family: @font-content;
+   color: @colour-content-text;
+   
+   .top_line {
+      display: block;
+      margin-top: 20px;
+      height: 50px;
+   }
+
+   a {
+      color: @colour-content-text;
+      
+      &:hover {
+         color: lighten( @colour-content-text, 30% );
+      }
+   }  
+   
+   .edit-link {
+      margin-top: 10px; text-align: right;
+   }
+   
+   img {
+      margin: 0px 10px 5px 0px;
+      
+      .left {
+         margin-left: 0;
+      }
+      
+      .right {
+         margin-right: 0;
+      }
+   }
+}
+
+.notice {
+   background-color: #d9e77a; 
+   padding: 10px;
+}
+
+.more-link {
+   font-size: 14px;
+   clear: both;
+}
+
+.content-block {
+   padding: 10px;
+   background-color: @colour-content-bg;
+   
+   border: 2px solid #ddd;
+}
+
+.single-post .summary-only {
+   display: none;
+}
+
+.nav {
+   height: 30px;
+   margin-top: 20px;
+   
+   a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+   }
+   
+   .nav-previous {
+      float: left;  clear: left;
+   }
+   
+   .nav-next {
+      float: right; clear: right;
+   }
+}
+
+
+.content-split {
+   height: 20px;
+   font-size: 1px;
+}
